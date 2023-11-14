@@ -18,6 +18,8 @@ public:
 private slots:
     void on_filiers_clicked();
 
+    void on_etudiant_clicked();
+
 private:
     Ui::options *ui;
 };
