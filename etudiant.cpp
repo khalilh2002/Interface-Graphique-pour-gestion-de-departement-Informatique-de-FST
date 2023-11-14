@@ -1,6 +1,8 @@
 #include "etudiant.h"
 #include "ui_etudiant.h"
 
+#include "registre_etud.h"
+
 /*test new from chatgpt*/
 #include <QTableWidget>
 #include <QTableWidgetItem>
@@ -11,14 +13,20 @@
 #include <cstdio>
 
 #include<iostream>
+
+#include<cstring>
 /**/
 
 int calcul(FILE *f){
     int nb=0;
+    char *tmp;
     while(feof(f)==0){
+        fscanf(f,"%s %s %s %s %s",tmp,tmp,tmp,tmp,tmp);
         nb++;
     }
-    return nb;
+    rewind(f);
+    //qDebug() << nb<<"\n";
+    return nb--;
 }
 
 etudiant::etudiant(QWidget *parent) :
@@ -28,44 +36,57 @@ etudiant::etudiant(QWidget *parent) :
     ui->setupUi(this);
 
     /*test*/
-    ui->tableWidget->setColumnCount(5);
-    ui->tableWidget->setRowCount(2);
-
-    QStringList list_header;
-    list_header<<"CNE"<<"Nom"<<"Prenom"<<"CIN"<<"Date de naison";
-    ui->tableWidget->setHorizontalHeaderLabels(list_header);
-
     FILE *etu;
-    etu=fopen("C:\\Users\\khali\\Desktop\\classroom\\untitled1\\txt\\etudiant.txt","r+");
+    int taille_fichier=2;
+
+    etu=fopen("C:\\Users\\khali\\Desktop\\classroom\\untitled1\\txt\\etudiant.txt","r+");//source des donner des etudiant
     if(etu==NULL){
         QMessageBox :: warning(this,"title","this file is not exsit etudiant");
     }
 
-    char cne[20],nom[20],prenom[20],date[20],cin[20];
+    taille_fichier=calcul(etu); //la taille des fichier
 
-    /*table*/
+    ui->tableWidget->setColumnCount(5);//"CNE"<<"Nom"<<"Prenom"<<"CIN"<<"Date de naison"
+    ui->tableWidget->setRowCount(taille_fichier);
+
+    QStringList list_header; //la paarite haut de tableau
+    list_header<<"CNE"<<"Nom"<<"Prenom"<<"CIN"<<"Date de nee";//list
+    ui->tableWidget->setHorizontalHeaderLabels(list_header);
+
+
+    /*table pour stcker les donnees des etudiant*/
 
     char **data = new char*[5];
         for (int i = 0; i < 5; ++i) {
         data[i] = new char[20];
     }
-
-    for (int row = 0; row < 2; ++row) {
-        fscanf(etu,"%s %s %s %s %s",data[1],nom,prenom,date,cin);
+    /*
+     * data[0]=CNE
+     * date[1]=NOM
+     * date[2]=Prenom
+     * date[3]=CIN
+     * date[4]=Date
+    */
+    for (int row = 0; row < taille_fichier-1; ++row) {
+        fscanf(etu,"%s %s %s %s %s",data[0],data[1],data[2],data[3],data[4]);//scaner line par line
         for (int col = 0; col < 5; ++col) {
 
-            QTableWidgetItem *item = new QTableWidgetItem(QString("%1 ").arg(QString(cne))/*.arg(nom).arg(prenom).arg(date).arg(cin)*/);
+            QTableWidgetItem *item = new QTableWidgetItem(QString("%1").arg(QString(data[col])));
             ui->tableWidget->setItem(row,col,item);
-            qDebug() << nom<<"" <<prenom <<"" << date<<"\n";
+            qDebug() << data[0]<<"\n";
 
         }
 
     }
 
-
 }
+
+
+
 
 etudiant::~etudiant()
 {
     delete ui;
 }
+
+

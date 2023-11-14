@@ -22,6 +22,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    /*del*/
+    options new_window;
+    new_window.setWindowFlag(Qt::Window);
+    //new_window.show();
+    close();
+    new_window.exec();
+    /**/
     using namespace std;
     bool found=false; //katchof wach password o username exsit
     char name[50] , password[50];

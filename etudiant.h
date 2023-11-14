@@ -15,6 +15,9 @@ public:
     explicit etudiant(QWidget *parent = nullptr);
     ~etudiant();
 
+private slots:
+
+
 private:
     Ui::etudiant *ui;
 };
