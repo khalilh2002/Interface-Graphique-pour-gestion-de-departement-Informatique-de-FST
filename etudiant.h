@@ -18,6 +18,8 @@ public:
 private slots:
 
 
+    void on_pushButton_registre_clicked();
+
 private:
     Ui::etudiant *ui;
 };

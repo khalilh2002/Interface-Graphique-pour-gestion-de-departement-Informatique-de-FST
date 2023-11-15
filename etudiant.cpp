@@ -16,7 +16,7 @@
 #include<cstring>
 /**/
 
-int calcul(FILE *f){
+int calcul(FILE *f){ /*calculate the numbre of rows*/
     int nb=0;
     char *tmp;
     while(feof(f)==0){
@@ -27,6 +27,11 @@ int calcul(FILE *f){
     //qDebug() << nb<<"\n";
     return nb--;
 }
+/*
+bool regsiter_function(FILE *f , QString data ){
+    //continue
+}
+*/
 
 etudiant::etudiant(QWidget *parent) :
     QDialog(parent),
@@ -72,21 +77,26 @@ etudiant::etudiant(QWidget *parent) :
 
             QTableWidgetItem *item = new QTableWidgetItem(QString("%1").arg(QString(data[col])));
             ui->tableWidget->setItem(row,col,item);
-            qDebug() << data[0]<<" ";
+            //qDebug() << data[0]<<" ";
 
         }
         std::cout<<std::endl;
-
     }
     fclose(etu);
 }
-
-
 
 
 etudiant::~etudiant()
 {
     delete ui;
 }
+/*continue ici*//*
+void etudiant::on_pushButton_registre_clicked()
+{
+    QTableWidgetItem *item = ui->tableWidget->currentItem();
+    if(item != nullptr){
+        qDebug()<<"data : "<<item->text();
+    }
 
-
+}
+*/
