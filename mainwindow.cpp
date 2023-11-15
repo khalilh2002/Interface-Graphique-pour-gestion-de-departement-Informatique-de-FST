@@ -1,3 +1,4 @@
+/* log in page*/
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "options.h"
@@ -25,7 +26,6 @@ void MainWindow::on_pushButton_clicked()
     /*del*/
     options new_window;
     new_window.setWindowFlag(Qt::Window);
-    //new_window.show();
     close();
     new_window.exec();
     /**/
@@ -62,7 +62,7 @@ void MainWindow::on_pushButton_clicked()
 
     }else{
 
-      QMessageBox::warning(this,"login info","the login is worong");
+      QMessageBox::warning(this,"login info","the login is wrong");
     }
     fclose(log);
 

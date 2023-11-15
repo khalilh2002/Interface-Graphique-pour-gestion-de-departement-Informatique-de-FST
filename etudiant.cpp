@@ -1,7 +1,6 @@
 #include "etudiant.h"
 #include "ui_etudiant.h"
 
-#include "registre_etud.h"
 
 /*test new from chatgpt*/
 #include <QTableWidget>
@@ -67,18 +66,19 @@ etudiant::etudiant(QWidget *parent) :
      * date[3]=CIN
      * date[4]=Date
     */
-    for (int row = 0; row < taille_fichier-1; ++row) {
+    for (int row = 0; row < taille_fichier-1; ++row) { //-1 car la debut de taleau est '0'
         fscanf(etu,"%s %s %s %s %s",data[0],data[1],data[2],data[3],data[4]);//scaner line par line
         for (int col = 0; col < 5; ++col) {
 
             QTableWidgetItem *item = new QTableWidgetItem(QString("%1").arg(QString(data[col])));
             ui->tableWidget->setItem(row,col,item);
-            qDebug() << data[0]<<"\n";
+            qDebug() << data[0]<<" ";
 
         }
+        std::cout<<std::endl;
 
     }
-
+    fclose(etu);
 }
 
 

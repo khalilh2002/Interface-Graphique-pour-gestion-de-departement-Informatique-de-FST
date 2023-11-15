@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>585</width>
-    <height>426</height>
+    <width>614</width>
+    <height>453</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,9 +18,21 @@
     <rect>
      <x>30</x>
      <y>60</y>
-     <width>511</width>
+     <width>541</width>
      <height>371</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>5</horstretch>
+     <verstretch>5</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>541</width>
+     <height>371</height>
+    </size>
    </property>
    <row>
     <property name="text">
@@ -68,7 +80,7 @@
     <rect>
      <x>30</x>
      <y>10</y>
-     <width>511</width>
+     <width>541</width>
      <height>44</height>
     </rect>
    </property>
