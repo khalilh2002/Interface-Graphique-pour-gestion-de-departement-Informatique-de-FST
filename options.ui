@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Les options</string>
   </property>
   <widget class="QFrame" name="frame">
    <property name="geometry">
@@ -52,6 +52,9 @@
       </property>
       <property name="text">
        <string>filiers</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
       </property>
      </widget>
     </item>

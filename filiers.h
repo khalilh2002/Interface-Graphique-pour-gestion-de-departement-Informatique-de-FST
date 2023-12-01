@@ -15,6 +15,11 @@ public:
     explicit filiers(QWidget *parent = nullptr);
     ~filiers();
 
+private slots:
+   // void on_pushButton_clicked();
+
+
+
 private:
     Ui::filiers *ui;
 };

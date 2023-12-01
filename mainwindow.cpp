@@ -29,7 +29,7 @@ void MainWindow::on_pushButton_clicked()
     QString name_given=ui->lineEdit_username->text();
     QString  password_given=ui->lineEdit_password->text();
     /*had khaso i tmodifia bnsba lokola pc*/
-    log = fopen("C:\\Users\\khali\\Desktop\\classroom\\untitled1\\login.txt","r");
+    log = fopen("C:/Users/khali/Desktop/qt mehdi/qt-c-/login.txt","r");
 
     if(log==NULL){
         QMessageBox::warning(this,"login info","file is not here");

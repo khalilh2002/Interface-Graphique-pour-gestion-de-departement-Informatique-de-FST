@@ -1,6 +1,8 @@
 #include "options.h"
 #include "ui_options.h"
 #include "filiers.h"
+#include "etudiant.h"
+#include "prof.h"
 
 options::options(QWidget *parent) :
     QDialog(parent),
@@ -17,7 +19,19 @@ options::~options()
 void options::on_filiers_clicked()
 {
     filiers windows;
-    close();
+
     windows.exec();
+}
+
+
+void options::on_etudiant_clicked()
+{
+    etudiant window;
+    window.exec();
+}
+void options::on_prof_clicked()
+{
+    prof window;
+    window.exec();
 }
 
