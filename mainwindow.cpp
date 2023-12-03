@@ -2,9 +2,8 @@
 #include "ui_mainwindow.h"
 #include "options.h"
 #include<iostream>
-#include<cstdio>
-#include<cstring>
 #include <QMessageBox>
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -12,50 +11,46 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
 }
 
 MainWindow::~MainWindow()
 {
+    this->db.Deconnect_db();
     delete ui;
 }
 
 
 void MainWindow::on_pushButton_clicked()
 {
-    using namespace std;
-    bool found=false; //katchof wach password o username exsit
-    char name[50] , password[50];
-    FILE *log;
-    QString name_given=ui->lineEdit_username->text();
-    QString  password_given=ui->lineEdit_password->text();
-    /*had khaso i tmodifia bnsba lokola pc*/
-    log = fopen("C:/Users/khali/Desktop/qt mehdi/qt-c-/login.txt","r");
 
-    if(log==NULL){
-        QMessageBox::warning(this,"login info","file is not here");
+    QString username = ui->lineEdit_username->text();
+    QString password = ui->lineEdit_password->text();
 
-    }
-    rewind(log); /*ktrj3 lwl*/
-    /*kt9lb 3la l user*/
-    while(feof(log)==0){
-        fscanf(log,"%s %s",name,password);
+    QSqlQuery query;
 
-        if(name_given==name && password_given==password){ /*camparer betwen qstring et char* */
-            found=true;
+    QString cmd="Select * from login where username = '"+username+"' and password='"+password+"'" ;
+
+    if(query.exec(cmd)){
+        bool find = false;
+        while(query.next()){
+            find = true;
+        }
+        if(find){
+
+            query.finish();
+            if(query.isActive())
+                qDebug()<<"stil avtive";
+            ui->label_info->setText("its correct");
+            options a ;
+            a.exec();
+
+        }else{
+            ui->label_info->setText("incorrect ");
         }
     }
-    if(found==true){
-        QMessageBox::information(this,"login info","the login is correct");
-        options new_window;
-        new_window.setWindowFlag(Qt::Window);
-        //new_window.show();
-        new_window.exec();
 
-    }else{
 
-      QMessageBox::warning(this,"login info","the login is worong");
-    }
-    fclose(log);
 
 
 }

@@ -2,20 +2,12 @@
 #include "ui_prof.h"
 
 
-/*test new from chatgpt*/
 #include <QTableWidget>
 #include <QTableWidgetItem>
-#include <QVBoxLayout>
 #include <QWidget>
 #include <QMessageBox>
 
-#include <cstdio>
 
-#include<iostream>
-
-#include <cstring>
-#include <QFileDialog>
-/**/
 
 
 
@@ -25,29 +17,10 @@ prof::prof(QWidget *parent) :
     ui(new Ui::prof)
 {
     ui->setupUi(this);
-    QFile CSVFile(QCoreApplication::applicationDirPath() + "/csvprof.csv");
-    if (CSVFile.open(QIODevice::ReadOnly | QIODevice::Text))
-    {
-        QTextStream stream(&CSVFile);
-        int row = 0;
-        while (!stream.atEnd())
-        {
-            QString lineData = stream.readLine();
-            QStringList columnData = lineData.split(';');
-            for (int col = 0; col < columnData.size(); ++col)
-            {
-                QTableWidgetItem* item = new QTableWidgetItem(columnData[col]);
-                ui->tableWidget->setItem(row, col, item);
-            }
-            ++row;
-        }
-        CSVFile.close();
-    }
-    else
-    {
-        // Handle the case when the file cannot be opened
-        qDebug() << "Failed to open the CSV file.";
-    }
+    // to stop user of editing the info
+    ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    //afficher
+    refresh();
 
 
 }
@@ -57,94 +30,83 @@ prof::~prof()
 {
     delete ui;
 }
-/*continue ici*/
 
 
-void prof::on_pushButton_registre_clicked()
+
+
+
+
+void prof::on_pushButton_refrech_clicked()
 {
-    // Step 1: Add a new row to the QTableWidget
-    int newRow = ui->tableWidget->rowCount();
-    ui->tableWidget->insertRow(newRow);
 
-    // Step 2: Obtain data for the new row (you can modify this part)
-    QString name = "New Name";
-    QString age = "20";
-    QString grade = "A";
+}
 
-    // Step 3: Insert the data into the new row in the QTableWidget
-    QTableWidgetItem* nameItem = new QTableWidgetItem(name);
-    QTableWidgetItem* ageItem = new QTableWidgetItem(age);
-    QTableWidgetItem* gradeItem = new QTableWidgetItem(grade);
 
-    ui->tableWidget->setItem(newRow, 0, nameItem);  // Assuming name is in column 0
-    ui->tableWidget->setItem(newRow, 1, ageItem);   // Assuming age is in column 1
-    ui->tableWidget->setItem(newRow, 2, gradeItem); // Assuming grade is in column 2
+void prof::refresh(){
+    //requet de execution
+    QSqlQuery query;
 
-    // Step 4: Open the CSV file in append mode and write the data for the new row
-    QFile CSVFile(QCoreApplication::applicationDirPath() + "/csvprof.csv");
-    if (CSVFile.open(QIODevice::Append | QIODevice::Text))
-    {
-        QTextStream stream(&CSVFile);
+    //les command de sql
+    QString cmd_selct="SELECT * FROM prof";
+    QString cmd_count="SELECT Count(*)from prof";
 
-        // Write data for the new row to the CSV file
-        for (int c = 0; c < ui->tableWidget->columnCount(); ++c)
-        {
-            QTableWidgetItem* cellItem = ui->tableWidget->item(newRow, c);
-            if (cellItem)
-            {
-                stream << cellItem->text();
-                if (c < ui->tableWidget->columnCount() - 1)
-                    stream << ";"; // Add the column delimiter
-            }
-        }
+    if(query.exec(cmd_count) and query.first()){
+        //les resulat de cont()
+        int row_total=query.value(0).toInt();
+        qDebug()<<row_total;
 
-        stream << "\n"; // Add a newline after each row
+        //set les nombres des lignes
+        ui->tableWidget->setRowCount(row_total); // set number of rows in table
+    }else{
+        qDebug() << "Error executing query:" << query.lastError().text();
 
-        CSVFile.close();
     }
-    else
-    {
-        qDebug() << "Failed to open the CSV file for appending.";
+    query.clear();
+    query.finish();
+
+    if(query.exec(cmd_selct)){
+        //afficher les tableaus sur Tableau
+        int row=0;
+        // lire lie par line
+        while(query.next()){
+            //lire colone par colone
+            for(int col=0 ; col < 5;col++){
+                //query.vallue(col+1) pour afficher 'nom'(1) 'prenom'(2) ...
+                qDebug()<<query.value(col+1).toString();
+                //set item pour le tableau
+                QTableWidgetItem* item = new QTableWidgetItem(query.value(col+1).toString());
+                //set chaque item
+                ui->tableWidget->setItem(row, col, item);
+            }
+            row++;
+        }
+        query.clear();
+        query.finish();
+
     }
 }
 
 
-
-
-
-
-
-void prof::on_tableWidget_cellChanged(int row, int column)
+void prof::on_pushButton_delete_clicked()
 {
-    // Obtenez le texte de la cellule modifiée
-    QTableWidgetItem *item = ui->tableWidget->item(row, column);
-    QString newText = item->text();
+    //deteerminer la ligne qui l utilisateur selectioner
 
-    // Ouvrez le fichier en écriture
-    QFile CSVFile(QCoreApplication::applicationDirPath() + "/csvprof.csv");
-    if (CSVFile.open(QIODevice::WriteOnly | QIODevice::Text))
-    {
-        QTextStream stream(&CSVFile);
+    //si lustilisateur ne selectioner rien
+    if(!ui->tableWidget->selectedItems().empty()){
+        QString cne_delete = ui->tableWidget->selectedItems().at(2)->text();
+        qDebug()<<cne_delete;
 
-        // Parcourez toutes les lignes et colonnes pour écrire les données dans le fichier
-        for (int r = 0; r < ui->tableWidget->rowCount(); ++r)
-        {
-            for (int c = 0; c < ui->tableWidget->columnCount(); ++c)
-            {
-                QTableWidgetItem *cellItem = ui->tableWidget->item(r, c);
-                if (cellItem)
-                    stream << cellItem->text();
-                if (c < ui->tableWidget->columnCount() - 1)
-                    stream << ";" ; // Ajoutez le délimiteur de colonne
-            }
-            stream << "\n" ; // Ajoutez un saut de ligne après chaque ligne
+        QString cmd_delete=" DELETE FROM prof WHERE CIN = 'var_delete';";
+        cmd_delete.replace("var_delete",cne_delete);
+        QSqlQuery qry;
+        if(qry.exec(cmd_delete)){
+            qDebug()<<"delete susccefully ";
+        }else{
+            qDebug()<<"delete worng  "+qry.lastError().text();
+
         }
+        refresh();
+    }
 
-        CSVFile.close();
-    }
-    else
-    {
-        // Gérez le cas où le fichier ne peut pas être ouvert en écriture
-        qDebug() << "Failed to open the CSV file for writing.";
-    }
 }
+

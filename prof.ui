@@ -6,164 +6,36 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>716</width>
-    <height>360</height>
+    <width>365</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Professeurs</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="0">
-    <widget class="QTableWidget" name="tableWidget">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-       <horstretch>5</horstretch>
-       <verstretch>5</verstretch>
-      </sizepolicy>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="pushButton_refrech">
+     <property name="text">
+      <string>Refresh</string>
      </property>
-     <property name="maximumSize">
-      <size>
-       <width>650</width>
-       <height>500</height>
-      </size>
-     </property>
-     <property name="rowCount">
-      <number>100</number>
-     </property>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <column>
-      <property name="text">
-       <string>Nom</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Prénom</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>ID</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Date de naissance</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>CIN</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Matiere</string>
-      </property>
-     </column>
     </widget>
    </item>
-   <item row="0" column="0">
+   <item row="1" column="0">
+    <widget class="QPushButton" name="pushButton_delete">
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QPushButton" name="pushButton_registre">
+     <property name="text">
+      <string>Register</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
     <widget class="QFrame" name="frame">
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -172,6 +44,31 @@
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout"/>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <column>
+      <property name="text">
+       <string>nom</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>prenom</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>cne</string>
+      </property>
+     </column>
     </widget>
    </item>
   </layout>

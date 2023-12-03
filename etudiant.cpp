@@ -1,22 +1,12 @@
 #include "etudiant.h"
 #include "ui_etudiant.h"
+#include "registre.h"
 
 
-/*test new from chatgpt*/
 #include <QTableWidget>
 #include <QTableWidgetItem>
-#include <QVBoxLayout>
 #include <QWidget>
 #include <QMessageBox>
-
-#include <cstdio>
-
-#include<iostream>
-
-#include <cstring>
-#include <QFileDialog>
-/**/
-
 
 
 
@@ -25,126 +15,128 @@ etudiant::etudiant(QWidget *parent) :
     ui(new Ui::etudiant)
 {
     ui->setupUi(this);
-    QFile CSVFile(QCoreApplication::applicationDirPath() + "/csvetud.csv");
-    if (CSVFile.open(QIODevice::ReadOnly | QIODevice::Text))
-    {
-        QTextStream stream(&CSVFile);
-        int row = 0;
-        while (!stream.atEnd())
-        {
-            QString lineData = stream.readLine();
-            QStringList columnData = lineData.split(';');
-            for (int col = 0; col < columnData.size(); ++col)
-            {
-                QTableWidgetItem* item = new QTableWidgetItem(columnData[col]);
-                ui->tableWidget->setItem(row, col, item);
-            }
-            ++row;
-        }
-        CSVFile.close();
-    }
-    else
-    {
-        // Handle the case when the file cannot be opened
-        qDebug() << "Failed to open the CSV file.";
-    }
+
+    ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
+    refresh();
+
+
 
 
 }
 
+void etudiant::refresh(){
+    //requet de execution
+    QSqlQuery query;
+
+    //les command de sql
+    QString cmd_selct="SELECT * FROM etudiant";
+    QString cmd_count="SELECT Count(*)from etudiant";
+
+    if(query.exec(cmd_count) and query.first()){
+        int row_total=query.value(0).toInt();
+        qDebug()<<row_total;
+        ui->tableWidget->setRowCount(row_total); // set number of rows in table
+    }else{
+        qDebug() << "Error executing query:" << query.lastError().text();
+
+    }
+    query.clear();
+    query.finish();
+    QSqlQuery qry ;
+    if(qry.exec(cmd_selct)){
+        int row=0;
+        while(qry.next()){
+            for(int col=0 ; col < 5;col++){
+                qDebug()<<qry.value(col+1).toString();
+                QTableWidgetItem* item = new QTableWidgetItem(qry.value(col+1).toString());
+                ui->tableWidget->setItem(row, col, item);
+            }
+            row++;
+        }
+        query.clear();
+        query.finish();
+
+    }
+}
 
 etudiant::~etudiant()
 {
+    //mydb.close();
     delete ui;
 }
-/*continue ici*/
+
+/*
+void etudiant::on_pushButton_registre_clicked()
+{
+
+    int row=ui->tableWidget->rowCount();
+    qDebug()<<" the last row is "<<row;
+    int col_total=ui->tableWidget->columnCount();
+    QSqlQuery qry;
+    QString cmd_insert="INSERT INTO etudiant (nom, prenom,cne,cin,date_ne)\
+        VALUES ('%1', '%2','%3','%4','%5');";
+
+    QTableWidgetItem *item ;
+
+    for(int col = 0 ; col <col_total ;col++ ){
+        item = ui->tableWidget->item(row-1,col);
+        if(item==NULL){
+            qDebug()<<"error "<<col;
+        }
+
+        cmd_insert.replace("%"+QString::number(col+1),item->text());
+    }
+
+    qDebug()<<cmd_insert;
+    if (!qry.exec(cmd_insert)) {
+        qDebug() << "Error executing query:" << qry.lastError().text();
+    } else {
+        qDebug() << "Data inserted successfully!";
+        ui->tableWidget->setRowCount(ui->tableWidget->rowCount()+1);
+    }
+
+    //delete item;
+
+}
+*/
+
+void etudiant::on_pushButton_clicked() //refresh button
+{
+    refresh();
+
+}
+
+
+void etudiant::on_pushButton_delete_clicked()
+{
+    ui->tableWidget->selectedItems();
+
+    if(!ui->tableWidget->selectedItems().empty()){
+    QString cne_delete ;
+    cne_delete = ui->tableWidget->selectedItems().at(2)->text() ;
+    qDebug()<<cne_delete;
+
+    QString cmd_delete=" DELETE FROM etudiant WHERE cne = 'var_delete';";
+    cmd_delete.replace("var_delete",cne_delete);
+    QSqlQuery qry;
+    if(qry.exec(cmd_delete)){
+        qDebug()<<"delete susccefully ";
+    }else{
+        qDebug()<<"delete worng  "+qry.lastError().text();
+
+    }
+    refresh();
+    }
+    else
+        qDebug()<< "empty !! ";
+
+}
 
 
 void etudiant::on_pushButton_registre_clicked()
 {
-    // Step 1: Add a new row to the QTableWidget
-    int newRow = ui->tableWidget->rowCount();
-    ui->tableWidget->insertRow(newRow);
-
-    // Step 2: Obtain data for the new row (you can modify this part)
-    QString name = "New Name";
-    QString age = "20";
-    QString grade = "A";
-
-    // Step 3: Insert the data into the new row in the QTableWidget
-    QTableWidgetItem* nameItem = new QTableWidgetItem(name);
-    QTableWidgetItem* ageItem = new QTableWidgetItem(age);
-    QTableWidgetItem* gradeItem = new QTableWidgetItem(grade);
-
-    ui->tableWidget->setItem(newRow, 0, nameItem);  // Assuming name is in column 0
-    ui->tableWidget->setItem(newRow, 1, ageItem);   // Assuming age is in column 1
-    ui->tableWidget->setItem(newRow, 2, gradeItem); // Assuming grade is in column 2
-
-    // Step 4: Open the CSV file in append mode and write the data for the new row
-    QFile CSVFile(QCoreApplication::applicationDirPath() + "/csvetud.csv");
-    if (CSVFile.open(QIODevice::Append | QIODevice::Text))
-    {
-        QTextStream stream(&CSVFile);
-
-        // Write data for the new row to the CSV file
-        for (int c = 0; c < ui->tableWidget->columnCount(); ++c)
-        {
-            QTableWidgetItem* cellItem = ui->tableWidget->item(newRow, c);
-            if (cellItem)
-            {
-                stream << cellItem->text();
-                if (c < ui->tableWidget->columnCount() - 1)
-                    stream << ";"; // Add the column delimiter
-            }
-        }
-
-        stream << "\n"; // Add a newline after each row
-
-        CSVFile.close();
-    }
-    else
-    {
-        qDebug() << "Failed to open the CSV file for appending.";
-    }
+    registre r ;
+    r.exec();
 }
 
-
-
-
-
-
-
-void etudiant::on_tableWidget_cellChanged(int row, int column)
-{
-    // Obtenez le texte de la cellule modifiée
-    QTableWidgetItem *item = ui->tableWidget->item(row, column);
-    QString newText = item->text();
-
-    // Ouvrez le fichier en écriture
-    QFile CSVFile(QCoreApplication::applicationDirPath() + "/csvetud.csv");
-    if (CSVFile.open(QIODevice::WriteOnly | QIODevice::Text))
-    {
-        QTextStream stream(&CSVFile);
-
-        // Parcourez toutes les lignes et colonnes pour écrire les données dans le fichier
-        for (int r = 0; r < ui->tableWidget->rowCount(); ++r)
-        {
-            for (int c = 0; c < ui->tableWidget->columnCount(); ++c)
-            {
-                QTableWidgetItem *cellItem = ui->tableWidget->item(r, c);
-                if (cellItem)
-                    stream << cellItem->text();
-                if (c < ui->tableWidget->columnCount() - 1)
-                    stream << ";" ; // Ajoutez le délimiteur de colonne
-            }
-            stream << "\n" ; // Ajoutez un saut de ligne après chaque ligne
-        }
-
-        CSVFile.close();
-    }
-    else
-    {
-        // Gérez le cas où le fichier ne peut pas être ouvert en écriture
-        qDebug() << "Failed to open the CSV file for writing.";
-    }
-}

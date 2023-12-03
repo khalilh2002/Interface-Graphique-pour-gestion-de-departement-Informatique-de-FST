@@ -22,6 +22,8 @@ private slots:
 
     void on_prof_clicked();
 
+    void on_note_clicked();
+
 private:
     Ui::options *ui;
 };

@@ -3,6 +3,7 @@
 #include "filiers.h"
 #include "etudiant.h"
 #include "prof.h"
+#include "emplois.h"
 
 options::options(QWidget *parent) :
     QDialog(parent),
@@ -32,6 +33,14 @@ void options::on_etudiant_clicked()
 void options::on_prof_clicked()
 {
     prof window;
+    window.exec();
+}
+
+
+void options::on_note_clicked()
+{
+
+    emplois window;
     window.exec();
 }
 
