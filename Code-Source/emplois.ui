@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>emplois</class>
+ <widget class="QDialog" name="emplois">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>285</width>
+    <height>331</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Emplois</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/img_file/time.png</normaloff>:/img_file/time.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="0" colspan="3">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="Cyc1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#Cyc1 {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 22px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#Cyc1:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#Cyc1:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Cycle D'ingénieur S1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Cyc2">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#Cyc2 {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 22px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#Cyc2:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#Cyc2:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Cycle D'ingénieur S3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Cyc3">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#Cyc3 {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 22px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#Cyc3:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#Cyc3:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Cycle D'ingénieur S5</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="LicEmp">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#LicEmp {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 22px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#LicEmp:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#LicEmp:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>License S5</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="MSTEmp">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#MSTEmp {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 22px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#MSTEmp:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#MSTEmp:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Master S3</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>EMPLOIS</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

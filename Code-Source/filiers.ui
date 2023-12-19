@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>filiers</class>
+ <widget class="QDialog" name="filiers">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>657</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Filieres</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/img_file/modules.png</normaloff>:/img_file/modules.png</iconset>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_11">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="3" column="0">
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="page">
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="1" column="0">
+          <widget class="QTabWidget" name="tabWidget">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab">
+            <attribute name="title">
+             <string>Logiciels et Systems Intelligents (LSI):</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_12">
+             <item row="0" column="0">
+              <widget class="QTreeWidget" name="treeWidget">
+               <column>
+                <property name="text">
+                 <string>Logiciels et Systems Intelligents (LSI):</string>
+                </property>
+               </column>
+               <item>
+                <property name="text">
+                 <string>S1:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>POO en C++</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Architecture des Ordinateurs &amp; Systémes D'exploitation</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Maths Pour L'ingénieur</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>System D'informations et Base de Données</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Architecture Réseaux et Protocoles</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Langue et Techniques de rédaction</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S2:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Théorie des Graphes</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>POO en Java et Programmation Mobile</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Conception Orienté Objet (UML) &amp; Qualité Logiciel</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Statistique descriptive et inférentielle</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Développement web et Frameworks (php, zend, symfony)</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Management &amp; comptabilité</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S3:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Systèmes embarqués &amp; Internet des objets</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Gestion de projet Informatique &amp; Planification des ressources d'entreprise (open ERP)</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Administration des bases de données</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Méthodologies de l'Intelligence Artificielle</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Architectures web distribuées (J2EE)</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Francais Avancée &amp; Techniques d'exposition</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S4:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Systèmes d’informations décisionnels &amp; data mining</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Technologies .NET</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Machine Learning &amp; Systèmes multi-agents</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Administration systèmes et réseaux</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Procesus audit &amp; Urbanisation des systèmes d’informations</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Droit &amp; gestion d'entreprise</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S5:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Business Intelligence &amp; Big Data</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Vision Artificielle</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Sécurité Intelligente des Systèmes d’informations</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Cloud Intelligence &amp; virtualisation</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Intelligence économique &amp; Soft Skills</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Francais professionnel &amp; techniques de coaching</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S6:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Projet De Fin D'étude</string>
+                 </property>
+                </item>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_2">
+            <attribute name="title">
+             <string>Géo Information</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="1">
+              <widget class="QTreeWidget" name="treeWidget_2">
+               <column>
+                <property name="text">
+                 <string>Géo Information</string>
+                </property>
+               </column>
+               <item>
+                <property name="text">
+                 <string>S1:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Algorithmique et programmation</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Compléments de mathématique et Analyse numérique</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Statistique/Analyse des données</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Bases physiques de la télédétection/Traitement du signal</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Communication professionnelle</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Systèmes d’information et réseaux informatique</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S2:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Cartographie numérique et DAO</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Programmation et modélisation Objet</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Information géographique et systèmes de projection</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Géométrie analytique et algorithmique</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Anglais 1</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Optimisation et analyse de systèmes</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S3:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Géodésie/Localisation par satellite (GPS)</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Topographie</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Bases de données  spatiales et relationnelles</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Communication professionnelle/Méthode de recherche</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Méthode d’analyse spatiales</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Systèmes d’information géographique</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S4:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Télédétection Radar/Lidar</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Télédétection et traitement d’images optique</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Photogrammétrie</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Programmation pour les SIG et pour la télédétection</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Anglais 2</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Wabemapping &amp; Développement mobile</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S5:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Systèmes de Management de la qualité/Gestion del’entreprise &amp; des ressources</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Géoinformation et gestion de l’environnement et du territoire</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>SIG et prise de décision</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Gestion et management de projet en Géoinformation</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Gestion des réseaux et développement socioéconomique</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Administration des données spatiales</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S6:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Projet de Fin D'étude</string>
+                 </property>
+                </item>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_2">
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QTabWidget" name="tabWidget_2">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab_3">
+            <attribute name="title">
+             <string>Génie Informatique</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <item row="0" column="0">
+              <widget class="QTreeWidget" name="treeWidget_4">
+               <column>
+                <property name="text">
+                 <string>Génie Informatique</string>
+                </property>
+               </column>
+               <item>
+                <property name="text">
+                 <string>S5:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Programmation Orientée Objet en C++</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Bases de Données</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Architecture C/S et Développement Web Dynamique</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Introduction aux Réseaux Informatiques</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Système d’exploitation UNIX/Linux</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TEC &amp; Anglais</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S6:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Modélisation UML</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Programmation Orientée Objet en Langage JAVA</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Les Réseaux TCP/IP</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Projet de fin d’études</string>
+                 </property>
+                </item>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_4">
+            <attribute name="title">
+             <string>Ingénierie et Développement d'Applications Informatiques</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_5">
+             <item row="0" column="0">
+              <widget class="QTreeWidget" name="treeWidget_3">
+               <column>
+                <property name="text">
+                 <string>Ingénierie et Développement d'Applications Informatiques</string>
+                </property>
+               </column>
+               <item>
+                <property name="text">
+                 <string>S5:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Modélisations avancée et Méthodes de génie logiciel</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Développement Web</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Base de données Structurées et non Structurées</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Programmation Orientée Objet en C++/Java</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Systèmes et réseaux informatiques</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Développement de soft skills</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S6:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Innover, Entreprendre et s’initier à la Gestion d'une Entreprise avec un ERP</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Initiation en développement mobile et Edge Computing</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Développement web avancé Back end (Python)</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>PFE</string>
+                 </property>
+                </item>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_3">
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="0">
+          <widget class="QTabWidget" name="tabWidget_3">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab_5">
+            <attribute name="title">
+             <string>MST : Intelligence Artificielle et Sciences de Données</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_7">
+             <item row="0" column="0">
+              <widget class="QTreeWidget" name="treeWidget_5">
+               <column>
+                <property name="text">
+                 <string>MST : Intelligence Artificielle et Sciences de Données</string>
+                </property>
+               </column>
+               <item>
+                <property name="text">
+                 <string>S1:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Théories et Systemes de Raisonnement Intelligents</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Mathématiques pour Analayse de Données</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Programmation Avancée</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Base de Données Avancées</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Machine Learning 1</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Anglais et Technique d'espression</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S2:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Infrastructure et Architecture des Systémes Distribués &amp; Big Data</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Platformes IOT CORE: Technologies, DATA et IA</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Metaheuristiques &amp; Algorithmes DE Recherche Stochastique</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>SMA &amp; NLP</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Datamining &amp; BI</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Developpement Personnel et Intelligence Emotionnel</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S3:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Multimedia Mining and Indexing</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Machine Lea 2 : DEEP and TRANSFERT LEARNING</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Machine Learning 2:</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Blockchain &amp; Securite Applicative</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Virtualization, CLOUD AND Edge Computing</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Digital Business Strategies  Leadership in the age of AI</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S4:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>PFE</string>
+                 </property>
+                </item>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_6">
+            <attribute name="title">
+             <string>Mobiquité et Big Data</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_8">
+             <item row="0" column="0">
+              <widget class="QTreeWidget" name="treeWidget_7">
+               <column>
+                <property name="text">
+                 <string>Mobiquité et Big Data</string>
+                </property>
+               </column>
+               <item>
+                <property name="text">
+                 <string>S1:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Programmation Orientée Objet Avancée : Java Et Python</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Systèmes Embarqués Et Mobilité</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Recherche Opérationnelle Et Théorie des Graphes</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>IP Mobile Et Protocoles</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Administration Des Bases De Données</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Anglais</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S2:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Data Mining Et Machine Learning</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Statistique Descriptive Et Inférentielle</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Architecture Et Technologies Big Data</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Bases Des Données Nosql</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Cloud Computing Et Virtualization</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Soft Skills</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S3:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Analysis, Mining And Indexing In Big Multimedia Systems</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Développement Mobile</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Big Data Analytics</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Objets Connectés Et Intelligence Artificielle Distribuée &amp; SMA</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Big Data Et Sécurité</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Management De Projet Et Gestion De L'innovation</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S4:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>PFE</string>
+                 </property>
+                </item>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_7">
+            <attribute name="title">
+             <string>Sécurité IT et Big Data</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_10">
+             <item row="0" column="0">
+              <widget class="QTreeWidget" name="treeWidget_6">
+               <column>
+                <property name="text">
+                 <string>Sécurité IT et Big Data</string>
+                </property>
+               </column>
+               <item>
+                <property name="text">
+                 <string>S1:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Programmation Orientée Objet Avancée en Java / Python</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Réseaux avancés</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Data Mining (DM) et Systèmes d’Aide à la Décision (DAS)</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Administration Systèmes et Réseaux</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Concepts fondamentaux de l’intelligence artificielle</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Anglais et technique d’expression</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S2:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Intelligence Artificielle Distribuée (SMA) &amp; Apprentissage Automatique (ML)</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Technologies IoT: Architectes, protocoles et applications</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Virtualisation, Cloud et Edge Computing</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Cryptographie Et Sécurité des Services</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Architecture et Technologies Big Data</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Gestion de l’innovation et management de projet informatique</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S3:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Cybersecurity &amp; Ethical hacking</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Calcul Haute Performance et Applications en Big Data</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Deep learning et Applications</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Administration des Bases de Données Distribuées et Clusters Big Data</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Audit des systèmes d’information et Management de la sécurité des systèmes d’information</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Développement Personnel Et Intelligence Émotionnelle</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S4:</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>PFE</string>
+                 </property>
+                </item>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QComboBox" name="comboBox_2">
+       <item>
+        <property name="text">
+         <string>Cycle d'ingénieur</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Licence</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Master</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Filieres</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>comboBox_2</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>377</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

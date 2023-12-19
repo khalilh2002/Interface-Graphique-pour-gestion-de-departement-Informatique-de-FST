@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>options</class>
+ <widget class="QDialog" name="options">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>423</width>
+    <height>307</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Les options</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/img_file/options.png</normaloff>:/img_file/options.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="maximumSize">
+        <size>
+         <width>541</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>7</width>
+            <height>22</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>7</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:700; color:#0055ff;&quot;&gt;Les Options&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700; color:#35362c;&quot;&gt;Les Options&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="filiers">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Helvetica Neue</family>
+                <pointsize>-1</pointsize>
+                <italic>false</italic>
+                <bold>false</bold>
+                <kerning>true</kerning>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="statusTip">
+               <string/>
+              </property>
+              <property name="whatsThis">
+               <string/>
+              </property>
+              <property name="accessibleName">
+               <string/>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#filiers {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 26px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#filiers:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#filiers:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}
+</string>
+              </property>
+              <property name="text">
+               <string>            Filières     </string>
+              </property>
+              <property name="icon">
+               <iconset resource="resource.qrc">
+                <normaloff>:/img_file/modules.png</normaloff>:/img_file/modules.png</iconset>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <property name="autoRepeat">
+               <bool>false</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="default">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="note">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Helvetica Neue</family>
+                <pointsize>-1</pointsize>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#note {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 26px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#note:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#note:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}</string>
+              </property>
+              <property name="text">
+               <string>          Emplois    </string>
+              </property>
+              <property name="icon">
+               <iconset resource="resource.qrc">
+                <normaloff>:/img_file/time.png</normaloff>:/img_file/time.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="etudiant">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Helvetica Neue</family>
+                <pointsize>-1</pointsize>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#etudiant {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 26px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#etudiant:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#etudiant:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}
+</string>
+              </property>
+              <property name="text">
+               <string>           Etudiant   </string>
+              </property>
+              <property name="icon">
+               <iconset resource="resource.qrc">
+                <normaloff>:/img_file/student.png</normaloff>:/img_file/student.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="prof">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Helvetica Neue</family>
+                <pointsize>-1</pointsize>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#prof {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 26px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#prof:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#prof:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}</string>
+              </property>
+              <property name="text">
+               <string>         Professeur</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resource.qrc">
+                <normaloff>:/img_file/teacher.png</normaloff>:/img_file/teacher.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
