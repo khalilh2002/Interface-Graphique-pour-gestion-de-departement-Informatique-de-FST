@@ -4,8 +4,8 @@ be sure to have Qt Creator and QT framework, SQLite, and g++ installed.
 
 # Login
 ```bash
-username : test
-password : test
+username: test
+password: test
 ```
 
 # value
