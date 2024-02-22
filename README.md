@@ -16,4 +16,5 @@ Enjoy it.
 For more details contact us by email. Feel free for suggestions.
 
 # How to contact us 
-Gmail: khalil.elhoussine@etu.uae.ac.ma
+Gmail (khalil el houssine) : khalil.elhoussine@etu.uae.ac.ma
+Gmail (bahassou mohamed amine) : bahassou.mohamedamine@etu.uae.ac.ma
